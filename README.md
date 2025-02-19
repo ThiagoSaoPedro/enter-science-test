@@ -34,8 +34,8 @@ DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
 DB_PORT=5432
 DB_DATABASE=eventos
-DB_USERNAME=postgres #Seu usuario no postgres
-DB_PASSWORD=admin  #Sua senho no postgres
+DB_USERNAME=postgres #Your user in PostgreSQL
+DB_PASSWORD=admin  #Your password in PostgreSQL
 ```
 Front-end:
 Create an .env file in ./enter-science/frontend and insert your spotify api id's
