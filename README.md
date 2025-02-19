@@ -39,12 +39,14 @@ DB_PASSWORD=admin  #Your password in PostgreSQL
 ```
 Front-end:
 Create an .env file in ./enter-science/frontend and insert your spotify api id's
+find out how to get the id's at: https://developer.spotify.com/documentation/web-api
 
 ```bash
 VITE_CLIENT_ID=YOURID
 VITE_CLIENT_SECRET=YOURID
 
 ```
+
 
 
 ```bash
