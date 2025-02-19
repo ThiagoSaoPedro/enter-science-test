@@ -7,19 +7,19 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('artista_selecionado');
-            $table->decimal('cache', 10, 2)->nullable();
-            $table->date('data_evento');
-            $table->string('endereco');
+            $table->string('name');
+            $table->string('artist_selected');
+            $table->decimal('fees', 10, 2)->nullable();
+            $table->date('date_event');
+            $table->string('adress');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('eventos');
+        Schema::dropIfExists('events');
     }
 };

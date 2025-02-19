@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EventoController;
+use App\Http\Controllers\EventController;
 
 Route::options('/event/store', function () {
     return response()->json([], 204)
