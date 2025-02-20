@@ -33,7 +33,7 @@ Configure your PostgreSQL data in ./enter-science/backend/.env:
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
 DB_PORT=5432
-DB_DATABASE=eventos
+DB_DATABASE=events
 DB_USERNAME=postgres #Your user in PostgreSQL
 DB_PASSWORD=admin  #Your password in PostgreSQL
 ```
