@@ -1,19 +1,33 @@
-import { createContext, useContext, useState} from "react";
+// context/ArtistContext.js
+import { createContext, useContext, useState } from "react";
 
-// It creates a global context for sharing data between components without having to pass props manually.
-const ArtistContext = createContext()
+const ArtistContext = createContext();
 
-export const ArtistProvider = ({children}) => {
+export const ArtistProvider = ({ children }) => {
   const [artist, setArtist] = useState("Name of artist");
+  const [events, setEvents] = useState([]); // List of events
+
+  // Function to add an event
+  const addEvent = (event) => {
+    setEvents([...events, event]);
+  };
+
+  // Function to edit an event
+  const editEvent = (id, updatedEvent) => {
+    setEvents(events.map((event) => (event.id === id ? updatedEvent : event)));
+  };
+
+  // Function to delete an event
+  const deleteEvent = (id) => {
+    setEvents(events.filter((event) => event.id !== id));
+  };
 
   return (
-    //Set and return artist
-    <ArtistContext.Provider value={{ artist, setArtist }}>
+    <ArtistContext.Provider value={{ artist, setArtist, events, addEvent, editEvent, deleteEvent }}>
       {children}
     </ArtistContext.Provider>
   );
 };
-
 
 export const useArtist = () => {
   const context = useContext(ArtistContext);
